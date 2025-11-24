@@ -93,15 +93,15 @@ const Gallery = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Download for iOS
+              Download for Android
             </motion.button>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full glass border-2 font-semibold hover:bg-accent transition-all duration-300"
             >
               Download for Android
-            </motion.button>
+            </motion.button> */}
           </div>
         </motion.div>
       </div>
