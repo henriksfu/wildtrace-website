@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 import { Camera, MapPin, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-wildlife.jpg";
 
-const Hero = () => {
+interface HeroProps {
+  onApproachClick: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onApproachClick }) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
@@ -20,27 +24,13 @@ const Hero = () => {
       {/* Floating elements */}
       <motion.div
         className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/10 blur-3xl"
-        animate={{
-          y: [0, 30, 0],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={{ y: [0, 30, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         className="absolute bottom-20 right-10 w-32 h-32 rounded-full bg-secondary/10 blur-3xl"
-        animate={{
-          y: [0, -40, 0],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
+        animate={{ y: [0, -40, 0], scale: [1, 1.2, 1] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -93,6 +83,7 @@ const Hero = () => {
               <Camera className="mr-2 h-5 w-5" />
               Download App
             </Button>
+
             <a
               href="https://github.com/henriksfu/WildTrace"
               target="_blank"
@@ -108,6 +99,16 @@ const Hero = () => {
               </Button>
             </a>
 
+            {/* Approach Button */}
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-6 rounded-full glass border-2 hover:bg-accent transition-all duration-300 hover:scale-105"
+              onClick={onApproachClick} // scrolls smoothly to Approach
+            >
+              <Sparkles className="mr-2 h-5 w-5" />
+              Approach
+            </Button>
           </motion.div>
 
           {/* Stats */}

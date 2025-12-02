@@ -42,12 +42,12 @@ const Footer = () => {
             {/* Dev 2 */}
             <div className="flex flex-col items-center">
               <a
-                href="https://github.com/REPLACE2"
+                href="https://github.com/ReidLockhart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
-                Reid Lockhart (@githubID)
+                Reid Lockhart (@ReidLockhart)
               </a>
               <span className="text-xs text-muted-foreground">User & UI/UX Lead</span>
             </div>
@@ -68,12 +68,12 @@ const Footer = () => {
             {/* Dev 4 */}
             <div className="flex flex-col items-center">
               <a
-                href="https://github.com/REPLACE4"
+                href="https://github.com/StevenG522"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
-                Steven Gong (@githubID)
+                Steven Gong (@StevenG522)
               </a>
               <span className="text-xs text-muted-foreground">Maps & Sighting Flow Lead</span>
             </div>

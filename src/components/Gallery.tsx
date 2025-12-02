@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import mockup1 from "@/assets/app-mockup-1.jpg";
 import mockup2 from "@/assets/app-mockup-2.jpg";
 import mockup3 from "@/assets/app-mockup-3.jpg";
+import ContributionsModal from "./ContributionsModal"; // make sure to create this component
 
 const screenshots = [
   { src: mockup1, alt: "AI Species Identification Screen" },
@@ -15,11 +16,13 @@ const Gallery = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const [isContributionsOpen, setContributionsOpen] = useState(false);
+
   return (
     <section ref={ref} className="py-32 px-4 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-accent/10" />
-      
+
       <div className="container mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -56,8 +59,6 @@ const Gallery = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
                   />
-                  
-                  {/* Overlay on hover */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
@@ -70,8 +71,6 @@ const Gallery = () => {
                   </motion.div>
                 </div>
               </div>
-
-              {/* Decorative glow */}
               <div className="absolute -inset-2 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
             </motion.div>
           ))}
@@ -88,6 +87,7 @@ const Gallery = () => {
             Ready to start your wildlife adventure?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Download for Android */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -95,16 +95,55 @@ const Gallery = () => {
             >
               Download for Android
             </motion.button>
-            {/* <motion.button
+
+            {/* MVVM PDF */}
+            <a
+              href="https://github.com/henriksfu/WildTrace/blob/main/WildTrace/Docs/MVVM.pdf?raw=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                MVVM
+              </motion.button>
+            </a>
+
+            {/* Threads Structure PDF */}
+            <a
+              href="https://github.com/henriksfu/WildTrace/blob/main/WildTrace/Docs/Threads%20Diagram.pdf?raw=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Threads Structure
+              </motion.button>
+            </a>
+
+            {/* Contributions Modal */}
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-full glass border-2 font-semibold hover:bg-accent transition-all duration-300"
+              onClick={() => setContributionsOpen(true)}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              Download for Android
-            </motion.button> */}
+              Contributions
+            </motion.button>
           </div>
         </motion.div>
       </div>
+
+      {/* Contributions Modal */}
+      <ContributionsModal
+        isOpen={isContributionsOpen}
+        onClose={() => setContributionsOpen(false)}
+      />
     </section>
   );
 };

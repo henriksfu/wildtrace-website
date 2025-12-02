@@ -31,6 +31,7 @@ const HowItWorks = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background" />
       
       <div className="container mx-auto relative z-10">
+        {/* Steps Section */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
@@ -97,6 +98,36 @@ const HowItWorks = () => {
             </div>
           </div>
         </div>
+
+        {/* Approach Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-32 text-center max-w-3xl mx-auto"
+        >
+          <span className="text-sm font-medium text-primary uppercase tracking-wider">
+            Our Approach
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            How WildTrace Stands Out
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 text-lg mb-4">
+            While there are several wildlife tracking apps on the market, we noticed 
+            that none successfully combined all the features we envisioned. Most 
+            existing apps lacked appeal for new users and didn’t leverage modern AI 
+            technology effectively.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 text-lg">
+            WildTrace aims to fill that gap by integrating AI-powered species 
+            identification, real-time wildlife data, interactive maps, and contextual 
+            information from trusted sources like Wikipedia. Our approach focuses on 
+            user-friendly design, engaging features, and accurate insights to make 
+            wildlife tracking both accessible and exciting for beginners and experts alike.
+          </p>
+        </motion.div>
+
       </div>
     </section>
   );
