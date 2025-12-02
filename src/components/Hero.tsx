@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ onApproachClick }) => {
                 className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Camera className="mr-2 h-5 w-5" />
-                Download App
+                App APK
               </Button>
             </a>
 
@@ -114,7 +114,7 @@ const Hero: React.FC<HeroProps> = ({ onApproachClick }) => {
             </Button>
 
             <a
-              href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+              href="https://youtu.be/367ZhMAgrOE"
               target="_blank"
               rel="noopener noreferrer"
             >
