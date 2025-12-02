@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/30" />
-      <div 
+      <div
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url(${heroImage})`,
@@ -16,7 +16,7 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       />
-      
+
       {/* Floating elements */}
       <motion.div
         className="absolute top-20 left-10 w-20 h-20 rounded-full bg-primary/10 blur-3xl"
@@ -86,21 +86,28 @@ const Hero = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Camera className="mr-2 h-5 w-5" />
               Download App
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 rounded-full glass border-2 hover:bg-accent transition-all duration-300 hover:scale-105"
+            <a
+              href="https://github.com/henriksfu/WildTrace"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <MapPin className="mr-2 h-5 w-5" />
-              Explore Map
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6 rounded-full glass border-2 hover:bg-accent transition-all duration-300 hover:scale-105"
+              >
+                <MapPin className="mr-2 h-5 w-5" />
+                Explore Codebase
+              </Button>
+            </a>
+
           </motion.div>
 
           {/* Stats */}

@@ -1,64 +1,92 @@
 import { Leaf } from "lucide-react";
 
 const Footer = () => {
-  const links = {
-    Product: ["Features", "Pricing", "Download", "FAQ"],
-    Company: ["About", "Blog", "Careers", "Contact"],
-    Legal: ["Privacy", "Terms", "Security"],
-    Social: ["Twitter", "Instagram", "Facebook", "YouTube"],
-  };
-
   return (
     <footer className="relative py-20 px-4 border-t border-border/50">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Logo and tagline */}
-          <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold">WildTrace</span>
+
+        {/* Logo + Tagline */}
+        <div className="flex flex-col items-center text-center gap-4 mb-10">
+          <div className="flex items-center gap-2">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+              <Leaf className="w-7 h-7 text-white" />
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Discover, identify, and protect wildlife with the power of AI.
-            </p>
+            <span className="text-2xl font-bold">WildTrace</span>
           </div>
 
-          {/* Links */}
-          {Object.entries(links).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="font-semibold mb-4">{category}</h3>
-              <ul className="space-y-2">
-                {items.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom bar */}
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 WildTrace. All rights reserved.
+          <p className="text-sm text-muted-foreground max-w-sm">
+            Discover, identify, and protect wildlife with the power of AI.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Terms of Service
-            </a>
+        </div>
+
+        {/* Developer Credits */}
+        <div className="text-center mb-12">
+          <p className="text-sm font-semibold mb-8">Developed by the WildTrace Team</p>
+
+          {/* Developer Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+
+            {/* Dev 1 */}
+            <div className="flex flex-col items-center">
+              <a
+                href="https://github.com/henriksfu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Henrik Sachdeva (@henriksfu)
+              </a>
+              <span className="text-xs text-muted-foreground">API & Architecture Lead</span>
+            </div>
+
+            {/* Dev 2 */}
+            <div className="flex flex-col items-center">
+              <a
+                href="https://github.com/REPLACE2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Reid Lockhart (@githubID)
+              </a>
+              <span className="text-xs text-muted-foreground">User & UI/UX Lead</span>
+            </div>
+
+            {/* Dev 3 */}
+            <div className="flex flex-col items-center">
+              <a
+                href="https://github.com/REPLACE3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Kavi Godden (@githubID)
+              </a>
+              <span className="text-xs text-muted-foreground">Backend & Database Lead</span>
+            </div>
+
+            {/* Dev 4 */}
+            <div className="flex flex-col items-center">
+              <a
+                href="https://github.com/REPLACE4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Steven Gong (@githubID)
+              </a>
+              <span className="text-xs text-muted-foreground">Maps & Sighting Flow Lead</span>
+            </div>
           </div>
         </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-border/50 flex justify-center">
+          <p className="text-sm text-muted-foreground">
+            © 2025 WildTrace. All rights reserved.
+          </p>
+        </div>
+
       </div>
     </footer>
   );
