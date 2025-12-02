@@ -76,13 +76,16 @@ const Hero: React.FC<HeroProps> = ({ onApproachClick }) => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button
-              size="lg"
-              className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              <Camera className="mr-2 h-5 w-5" />
-              Download App
-            </Button>
+            <a href="/WildTrace.apk" download>
+  <Button
+    size="lg"
+    className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+  >
+    <Camera className="mr-2 h-5 w-5" />
+    Download App
+  </Button>
+</a>
+
 
             <a
               href="https://github.com/henriksfu/WildTrace"

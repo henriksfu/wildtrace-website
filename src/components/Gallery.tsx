@@ -24,13 +24,15 @@ const Gallery = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* Download */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Download for Android
-            </motion.button>
+            <a href="/WildTrace.apk" download>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Download for Android
+              </motion.button>
+            </a>
 
             {/* MVVM PDF */}
             <a
