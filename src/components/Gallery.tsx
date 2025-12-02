@@ -64,6 +64,17 @@ const Gallery = () => {
               </motion.button>
             </a>
 
+            <a href="/WildTrace-main.zip" download>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Zip of Source File
+              </motion.button>
+            </a>
+
+
             {/* Contributions Modal */}
             <motion.button
               whileHover={{ scale: 1.05 }}

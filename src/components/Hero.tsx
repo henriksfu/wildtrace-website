@@ -77,14 +77,14 @@ const Hero: React.FC<HeroProps> = ({ onApproachClick }) => {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a href="/WildTrace.apk" download>
-  <Button
-    size="lg"
-    className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-  >
-    <Camera className="mr-2 h-5 w-5" />
-    Download App
-  </Button>
-</a>
+              <Button
+                size="lg"
+                className="text-lg px-8 py-6 rounded-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <Camera className="mr-2 h-5 w-5" />
+                Download App
+              </Button>
+            </a>
 
 
             <a
@@ -112,6 +112,22 @@ const Hero: React.FC<HeroProps> = ({ onApproachClick }) => {
               <Sparkles className="mr-2 h-5 w-5" />
               Approach
             </Button>
+
+            <a
+              href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-6 rounded-full glass border-2 hover:bg-accent transition-all duration-300 hover:scale-105"
+              >
+                <Sparkles className="mr-2 h-5 w-5" />
+                YT Tutorial
+              </Button>
+            </a>
+
           </motion.div>
 
           {/* Stats
