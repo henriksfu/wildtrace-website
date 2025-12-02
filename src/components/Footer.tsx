@@ -55,12 +55,12 @@ const Footer = () => {
             {/* Dev 3 */}
             <div className="flex flex-col items-center">
               <a
-                href="https://github.com/REPLACE3"
+                href="https://github.com/Roguecoder113"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
-                Kavi Godden (@githubID)
+                Kavi Godden (@Roguecoder113)
               </a>
               <span className="text-xs text-muted-foreground">Backend & Database Lead</span>
             </div>
